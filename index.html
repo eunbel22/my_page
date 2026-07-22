@@ -1,325 +1,102 @@
-<!-- 파일명: index.html -->
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>김은별 | 자기소개</title>
-  <style>
-    :root{
-      --bg: #0b1020;
-      --card: rgba(255,255,255,.08);
-      --text: #eaf0ff;
-      --muted: rgba(234,240,255,.75);
-      --line: rgba(234,240,255,.18);
-      --accent: #7aa7ff;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    *{ box-sizing: border-box; }
-    body{
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(900px 500px at 15% 10%, rgba(122,167,255,.30), transparent 60%),
-        radial-gradient(800px 500px at 80% 20%, rgba(156,255,224,.18), transparent 55%),
-        radial-gradient(700px 450px at 40% 90%, rgba(255,122,214,.12), transparent 55%),
-        var(--bg);
-      line-height: 1.6;
-    }
+<!-- ========================================================= -->
+<!-- 바꾸는 곳 1. 브라우저 탭에 뜨는 이름입니다.                    -->
+<!-- ========================================================= -->
 
-    a{ color: var(--text); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
+<title>김은별 | 프로덕트 매니저</title>
 
-    .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 48px 20px 80px;
-    }
+<style>
+  :root { --ink:#1a1a1a; --muted:#6b7280; --line:#e5e7eb; --accent:#2563eb; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    color:var(--ink); background:#fff; line-height:1.7;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap { max-width:720px; margin:0 auto; padding:64px 24px 96px; }
+  .name { font-size:44px; font-weight:800; letter-spacing:-0.02em; }
+  .role { font-size:19px; color:var(--muted); margin-top:10px; }
+  .rule { width:56px; height:4px; background:var(--ink); border-radius:2px; margin:28px 0 36px; }
+  .lead { font-size:20px; line-height:1.75; }
+  h2 { font-size:15px; font-weight:800; letter-spacing:0.06em; color:var(--muted);
+       margin:52px 0 18px; text-transform:uppercase; }
+  ul { list-style:none; }
+  li { padding:14px 0; border-bottom:1px solid var(--line); font-size:17px; }
+  li b { display:block; font-size:13px; color:var(--muted); font-weight:700; margin-bottom:4px; }
+  a { color:var(--accent); text-decoration:none; font-weight:700; }
+  a:hover { text-decoration:underline; }
+  .foot { margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
+          font-size:14px; color:var(--muted); }
+  @media (max-width:600px) {
+    .wrap { padding:44px 20px 72px; }
+    .name { font-size:34px; }
+    .lead { font-size:18px; }
+  }
+</style>
 
-    header{
-      display: grid;
-      gap: 18px;
-      padding: 28px 22px;
-      border: 1px solid var(--line);
-      background: var(--card);
-      border-radius: 18px;
-      backdrop-filter: blur(10px);
-    }
-
-    .top{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .brand{
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .avatar{
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: linear-gradient(135deg, rgba(122,167,255,.9), rgba(156,255,224,.65));
-      display: grid;
-      place-items: center;
-      color: #061022;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    h1{
-      font-size: 24px;
-      margin: 0;
-      letter-spacing: -0.02em;
-    }
-
-    .subtitle{
-      margin: 2px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    nav{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .chip{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .hero p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    main{
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 16px;
-    }
-
-    @media (max-width: 860px){
-      main{ grid-template-columns: 1fr; }
-    }
-
-    section{
-      border: 1px solid var(--line);
-      background: var(--card);
-      border-radius: 18px;
-      padding: 18px 18px 16px;
-      backdrop-filter: blur(10px);
-    }
-
-    section h2{
-      margin: 0 0 10px;
-      font-size: 16px;
-      letter-spacing: -0.01em;
-    }
-
-    .list{
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-    .list li{ margin: 6px 0; }
-
-    .grid{
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-    @media (max-width: 520px){
-      .grid{ grid-template-columns: 1fr; }
-    }
-
-    .tag{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      padding: 10px 12px;
-      border-radius: 14px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .cta{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-
-    .btn{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(122,167,255,.18);
-      color: var(--text);
-      font-weight: 600;
-      font-size: 14px;
-    }
-    .btn.secondary{
-      background: rgba(255,255,255,.06);
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    footer{
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 12px;
-      text-align: center;
-      opacity: .9;
-    }
-
-    .divider{
-      height: 1px;
-      background: var(--line);
-      margin: 14px 0;
-    }
-  </style>
 </head>
 <body>
-  <div class="wrap">
-    <header id="top">
-      <div class="top">
-        <div class="brand">
-          <div class="avatar" aria-hidden="true">KE</div>
-          <div>
-            <h1>김은별</h1>
-            <p class="subtitle">프로덕트매니저(PM)를 목표로 공부 중</p>
-          </div>
-        </div>
 
-        <nav aria-label="페이지 메뉴">
-          <a class="chip" href="#about">소개</a>
-          <a class="chip" href="#skills">역량</a>
-          <a class="chip" href="#projects">프로젝트</a>
-          <a class="chip" href="#contact">연락</a>
-        </nav>
-      </div>
+<div class="wrap">
 
-      <div class="hero">
-        <p>
-          사용자의 문제를 정의하고, 가설을 세우고, 데이터와 커뮤니케이션으로 제품을 개선하는 과정을 좋아합니다.
-          작은 실험을 빠르게 반복하며 “왜?”를 끝까지 파고드는 PM이 되고 싶습니다.
-        </p>
-      </div>
-    </header>
 
-    <main>
-      <div class="left">
-        <section id="about">
-          <h2>About</h2>
-          <ul class="list">
-            <li><strong>관심 분야:</strong> 제품 전략, 사용자 리서치, MVP/실험 설계, 지표 기반 개선</li>
-            <li><strong>일하는 방식:</strong> 문제 정의 → 가설/우선순위 → 실행 → 측정 → 학습/반복</li>
-            <li><strong>목표:</strong> 사용자의 “불편”을 “경험”으로 바꾸는 프로덕트를 만드는 PM</li>
-          </ul>
+  <!-- ========================================================= -->
+  <!-- 바꾸는 곳 2. 이름과 목표 직무입니다.                          -->
+  <!-- 실명이 부담되면 닉네임을 써도 됩니다.                          -->
+  <!-- ========================================================= -->
 
-          <div class="divider"></div>
+  <div class="name">김은별</div>
+  <div class="role">프로덕트 매니저를 준비합니다</div>
 
-          <h2>지금 공부하는 것</h2>
-          <div class="grid" aria-label="학습 항목">
-            <div class="tag">PRD 작성 / 요구사항 정리</div>
-            <div class="tag">사용자 인터뷰 / 설문 설계</div>
-            <div class="tag">지표 설계 (North Star, Funnel)</div>
-            <div class="tag">A/B 테스트 기초</div>
-            <div class="tag">애자일 / 스프린트 운영</div>
-            <div class="tag">기본 HTML/CSS/JS</div>
-          </div>
-        </section>
+  <div class="rule"></div>
 
-        <section id="projects" style="margin-top: 16px;">
-          <h2>프로젝트 (예시 영역)</h2>
-          <ul class="list">
-            <li>
-              <strong>PM 스터디 노트 정리 페이지</strong> — 학습 내용을 주차별로 정리하고 공유 (Notion/블로그 등)
-            </li>
-            <li>
-              <strong>가상의 기능 개선 PRD</strong> — 문제 정의, KPI, 시나리오, 릴리즈 계획까지 작성
-            </li>
-            <li>
-              <strong>간단한 랜딩 페이지</strong> — HTML/CSS로 자기소개 1페이지 제작 (현재 페이지)
-            </li>
-          </ul>
-          <p class="subtitle" style="margin-top:10px;">
-            위 항목들은 예시입니다. 실제 경험/링크에 맞게 수정해 주세요.
-          </p>
-        </section>
-      </div>
+  <!-- ========================================================= -->
+  <!-- 바꾸는 곳 3. 나를 한 문장으로. (어제 만든 "캐릭터 한 문장")     -->
+  <!-- ========================================================= -->
 
-      <div class="right">
-        <section id="skills">
-          <h2>핵심 역량</h2>
-          <ul class="list">
-            <li>문제 정의 및 우선순위 설정</li>
-            <li>사용자 관점의 요구사항 정리</li>
-            <li>팀 커뮤니케이션 및 조율</li>
-            <li>지표 기반 의사결정(기초)</li>
-          </ul>
-        </section>
+  <p class="lead">
+    막힌 상황에서 원인을 정의하고, 실행 방식을 바꿔 실제 반응을 만들어 온 사람입니다.
+  </p>
 
-        <section id="contact" style="margin-top: 16px;">
-          <h2>Contact</h2>
-          <ul class="list">
-            <li><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/your-id" target="_blank" rel="noreferrer">github.com/your-id</a></li>
-            <li><strong>Portfolio:</strong> <a href="https://your-site.com" target="_blank" rel="noreferrer">your-site.com</a></li>
-          </ul>
 
-          <div class="cta">
-            <a class="btn" href="#top">맨 위로</a>
-            <a class="btn" href="carrer.html">커리어 보기</a>
-            <a class="btn secondary" href="#" onclick="copyEmail(event)">이메일 복사</a>
-          </div>
-          <p class="subtitle" id="copyResult" aria-live="polite" style="margin-top:10px;"></p>
-        </section>
-      </div>
-    </main>
+  <h2>지금 하는 것</h2>
+  <ul>
+    <!-- ===================================================== -->
+    <!-- 바꾸는 곳 4. 목록 항목입니다.                            -->
+    <!-- <li> 한 덩어리가 한 줄입니다. 복사해서 늘리면 됩니다.       -->
+    <!-- ===================================================== -->
+    <li>
+      <b>학습</b>
+      AI 프로덕트 매니저 트랙 (2026.07 - 2026.09)
+    </li>
+    <li>
+      <b>관심</b>
+      결과물보다 과정을 남기는 일. 문제를 정의하고 실행으로 옮기는 구조.
+    </li>
+  </ul>
 
-    <footer>
-      © <span id="year"></span> 김은별. Vanilla HTML/CSS/JS로 제작.
-    </footer>
+
+  <h2>기록</h2>
+  <ul>
+    <!-- ===================================================== -->
+    <!-- 바꾸는 곳 5. 다른 페이지로 가는 링크입니다.                -->
+    <!-- career.html 파일을 만든 뒤에 살아납니다.                  -->
+    <!-- ===================================================== -->
+    <li><a href="career.html">경력 정리 →</a></li>
+  </ul>
+
+
+  <div class="foot">
+    <!-- 바꾸는 곳 6. 아래 날짜만 오늘로 바꾸면 됩니다. -->
+    2026.07.22 부터 기록합니다.
   </div>
 
-  <script>
-    // 현재 연도 표시
-    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // 이메일 복사 (메일 주소를 실제 주소로 바꾸면 같이 바꿔주세요)
-    function copyEmail(e){
-      e.preventDefault();
-      const email = "your-email@example.com";
-      const resultEl = document.getElementById("copyResult");
-
-      if (!navigator.clipboard) {
-        resultEl.textContent = "복사 기능을 사용할 수 없는 환경입니다. 이메일을 직접 복사해 주세요: " + email;
-        return;
-      }
-
-      navigator.clipboard.writeText(email)
-        .then(() => resultEl.textContent = "이메일이 클립보드에 복사되었습니다: " + email)
-        .catch(() => resultEl.textContent = "복사에 실패했어요. 이메일을 직접 복사해 주세요: " + email);
-    }
-  </script>
+</div>
 </body>
 </html>
