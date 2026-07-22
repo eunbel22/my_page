@@ -3,442 +3,103 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>
-경력
- 
-정리
- | 
-김한얼
-</title>
-<style>
-:root { --ink:#1a1a1a; --muted:#6b7280; --line:#e5e7eb; --accent:#2563eb; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body {
-    font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','
-맑은
- 
-고딕
-',sans-serif;
-    color:var(--ink); background:#fff; line-height:1.7;
-    -webkit-text-size-adjust:100%;
-  }
-  .wrap { max-width:760px; margin:0 auto; padding:56px 24px 96px; }
-  .back { font-size:15px; color:var(--muted); text-decoration:none; }
-  .back:hover { color:var(--ink); }
-  h1 { font-size:34px; font-weight:800; letter-spacing:-0.02em; margin-top:20px; }
-  .rule { width:56px; height:4px; background:var(--ink); border-radius:2px; margin:22px 0 34px; }
-  .box { background:#f6f8fa; border-left:4px solid var(--accent);
-         border-radius:8px; padding:18px 20px; margin-bottom:16px; font-size:17px; }
-  .box .lb { display:block; font-size:13px; font-weight:800; color:var(--accent); margin-bottom:6px; }
-  h2 { font-size:21px; font-weight:800; margin:46px 0 18px;
-       padding-bottom:8px; border-bottom:2px solid var(--line); }
-  .row { display:flex; gap:14px; padding:11px 0; border-bottom:1px solid var(--line);
-         align-items:flex-start; }
-  .tag { flex:0 0 74px; text-align:center; padding:5px 0; border-radius:6px;
-         font-size:14px; font-weight:800; background:#eef1f5; color:#37414d; }
-  .t-goal { background:#e0efff; color:#1f5fa8; }
-  .t-limit{ background:#fff0df; color:#a86a1f; }
-  .t-judge{ background:#efe6ff; color:#7a4fc0; }
-  .t-do   { background:#e2f6e8; color:#2f8f4e; }
-  .t-out  { background:#ffe6e6; color:#c0392b; }
-  .val { flex:1; font-size:16.5px; padding-top:3px; }
-  .foot { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
-          font-size:14px; color:var(--muted); }
-  @media (max-width:600px) {
-    .wrap { padding:40px 20px 72px; }
-    h1 { font-size:28px; }
-    .row { flex-direction:column; gap:6px; }
-    .tag { flex:none; display:inline-block; padding:4px 12px; }
-  }
-</style>
+<title>경력 정리 | 김은별</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="grid-overlay"></div>
+
 <div class="wrap">
-  <a class="back" href="index.html">← 
-처음으로
-</a>
-  <!-- ========================================================= -->
-  <!-- 
-바꾸는
- 
-곳
- 1. 
-제목입니다
-.                                    -->
-  <!-- ========================================================= -->
-  <h1>
-경력
- 
-정리
-</h1>
-  <div class="rule"></div>
-  <!-- ========================================================= -->
-  <!-- 
-바꾸는
- 
-곳
- 2. 
-어제
- 
-만든
- "
-궤적
- 
-한
- 
-줄
-"
-을
- 
-넣습니다
-.               -->
-  <!-- 
-회사
- 
-실명은
- 
-빼고
- 
-업종
-·
-규모로
- 
-바꿔
- 
-씁니다
-.                      -->
-  <!-- ========================================================= -->
-  <div class="box">
-    <span class="lb">
-궤적
-</span>
-    
-현장에서
- 
-문제를
- 
-발견하고
- 
-원인을
- 
-파악해
- 
-기준으로
- 
-만드는
- 
-일을
- 
-해왔고
-,
-    
-그
- 
-경험을
- 
-이어
- 
-프로덕트
- 
-매니저
- 
-방향을
- 
-준비하고
- 
-있습니다
-.
+
+  <div class="topnav">
+    <a href="index.html">← 홈으로</a>
+    <span class="status"><span class="dot"></span>CAREER LOG</span>
   </div>
-  <!-- ========================================================= -->
-  <!-- 
-바꾸는
- 
-곳
- 3. 
-어제
- 
-만든
- "
-캐릭터
- 
-한
- 
-문장
-"
-입니다
-.                -->
-  <!-- ========================================================= -->
-  <div class="box">
-    <span class="lb">
-캐릭터
-</span>
-    
-한번
- 
-관여한
- 
-문제는
- 
-넘기지
- 
-않고
-, 
-반복
- 
-여부와
- 
-원인을
- 
-확인해
- 
-끝까지
- 
-해결하는
- 
-사람입니다
-.
+
+  <div class="name" style="font-size:40px;">경력 정리</div>
+  <div class="role">프로젝트 상세 역할, 연구 활동, 자격증과 기타 경험을 모았습니다.</div>
+
+  <h2>핵심 프로젝트</h2>
+  <ul>
+    <li>
+      <b>AI CHATBOT · TEAM</b>
+      <span class="desc">AI 챗봇 "Porty" — 벡터 기반 NLP + 카카오 세이프가드 연동</span>
+      <span class="sub">졸업작품 · 담당: 학습 모델 구축, 대화 프롬프트 설계, Kakao Safeguard 연동으로 부적절한 입력 필터링</span>
+    </li>
+    <li>
+      <b>IOT / CLOUD · TEAM</b>
+      <span class="desc">IoT 쿨링포그 모니터링 시스템 — Raspberry Pi + AWS</span>
+      <span class="sub">졸업작품 · 담당: 센서 데이터 실시간 수집·시각화, 하드웨어-클라우드-웹 통신 구조 설계, 카메라 피드 연동 및 원격 제어 구현</span>
+    </li>
+    <li>
+      <b>GAME DEV · SOLO</b>
+      <span class="desc">노가다 팜 키친 — Unity/C# 기반 모바일 시뮬레이션 게임</span>
+      <span class="sub">교과 프로젝트 · 기획부터 구현까지 단독 진행 (레벨업 시스템, 자동 생산 타이머, 다중 씬 전환, 오디오 시스템)</span>
+    </li>
+    <li>
+      <b>WEB · SOLO</b>
+      <span class="desc">기업 웹사이트 제작 및 Netlify 배포</span>
+      <span class="sub">인턴십 (2024.09 – 12) · 요구사항 분석부터 설계·개발·배포·운영 대응까지 단독 담당</span>
+    </li>
+    <li>
+      <b>RESEARCH</b>
+      <span class="desc">학부연구생 · 케이에스텍(KSTECH)</span>
+      <span class="sub">2026.01 – 07 · 여러 산학 프로젝트에 참여하며 자료조사부터 실험, 모델 개발, 해석까지 다양한 역할 수행</span>
+      <ul class="sublist">
+        <li>UAM 배터리 특허·기술 동향 자료조사</li>
+        <li>도어트림 탄소량 LCA평가 – 현장 공정조사 및 openLCA 데이터 구축</li>
+        <li>소음방지매트 탄소표지인증평가 – 현장 공정조사 및 LCA 데이터 구축</li>
+        <li>머신러닝 기반 알약 불량 검출 프로그램 개발 (Python SVR, LabVIEW 연동)</li>
+        <li>UTM 실험 DB 구축 및 실험 매뉴얼 작성</li>
+        <li>시계열 데이터 분석 기반 논문 작성 중</li>
+        <li>발 혈액순환 촉진기 워머 개발 소재 실험</li>
+        <li>Abaqus를 이용한 알약 압축 성형 유한요소해석</li>
+        <li>Abaqus를 이용한 H형강 인도교 구조해석</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>스택 &amp; 자격</h2>
+  <div class="tags">
+    <span class="tag">Python</span>
+    <span class="tag">Unity / C#</span>
+    <span class="tag">AWS</span>
+    <span class="tag">ROS2</span>
+    <span class="tag">Raspberry Pi</span>
+    <span class="tag">SQLD</span>
+    <span class="tag">정보처리기사</span>
+    <span class="tag">컴퓨터활용능력 2급</span>
   </div>
-  <!-- ========================================================= -->
-  <!-- 
-바꾸는
- 
-곳
- 4. 
-사건
- 
-하나입니다
-. 
-제목을
- 
-자기
- 
-것으로
- 
-바꿉니다
-.      -->
-  <!-- 
-아래
- 
-여섯
- 
-줄
-(
-상황
-~
-결과
-)
-의
- 
-내용만
- 
-바꾸면
- 
-됩니다
-.               -->
-  <!-- 
-사건을
- 
-하나
- 
-더
- 
-넣고
- 
-싶으면
- <h2>
-부터
- 
-끝까지
- 
-복사합니다
-.         -->
-  <!-- ========================================================= -->
-  <h2>
-사건
- A. 
-매장
- 
-운영
- 
-기준
- 
-만들기
-</h2>
-  <div class="row">
-    <span class="tag">
-상황
-</span>
-<span class="val">
-매장이
- 
-늘어나는
- 
-동안
- 
-운영과
- 
-교육이
- 
-오래
- 
-일한
- 
-사람의
- 
-기억과
- 
-말로만
- 
-전달되고
- 
-있었습니다
-.</span>
-</div>
-<div class="row">
-<span class="tag t-goal">
-목표
-</span>
-<span class="val">
-여러
- 
-매장이
- 
-공통으로
- 
-쓸
- 
-운영
- 
-기준을
- 
-만드는
- 
-것
-.</span>
-</div>
-<div class="row">
-<span class="tag t-limit">
-제약
-</span>
-<span class="val">
-지원
- 
-인력이
- 
-두
- 
-명이었고
- 
-기존
- 
-자료가
- 
-흩어져
- 
-있었습니다
-.</span>
-</div>
-<div class="row">
-<span class="tag t-judge">
-판단
-</span>
-<span class="val">
-매장이
- 
-늘면
- 
-개인의
- 
-기억만으로는
- 
-같은
- 
-기준을
- 
-유지할
- 
-수
- 
-없다고
- 
-봤습니다
-.</span>
-</div>
-<div class="row">
-<span class="tag t-do">
-실행
-</span>
-<span class="val">
-흩어진
- 
-자료를
- 
-모아
- 
-운영지침과
- 
-기준을
- 
-정리하고
-, 
-도구와
- 
-중량을
- 
-사진
- 
-자료로
- 
-표준화했습니다
-.</span>
-</div>
-<div class="row">
-<span class="tag t-out">
-결과
-</span>
-<span class="val">
-담당자
- 
-없이도
- 
-자료로
- 
-교육이
- 
-가능해졌고
-, 
-오픈
- 
-지원
- 
-약
- 1
-주
- / 
-교육
- 3
-일
-~1
-주로
- 
-기준이
- 
-잡혔습니다
-.</span>
-</div>
-<div class="foot">
-<!-- 
-바꾸는
- 
-곳
- 5. 
-날짜만
- 
-바꿉니다
-. -->
-2026.07.22 
-작성
-</div>
+
+  <h2>기타 활동</h2>
+  <ul>
+    <li>
+      <b>DORM</b>
+      <span class="desc">기숙사 층장</span>
+      <span class="sub">(2023.03 – 현재, 3년) · 근무 스케줄 관리, 민원 대응, 행정실 협업</span>
+    </li>
+    <li>
+      <b>MENTORING</b>
+      <span class="desc">사회리더 멘토링</span>
+      <span class="sub">한국장학재단 (2023, 2025) · 발표 자료 제작 및 발표</span>
+    </li>
+    <li>
+      <b>SUPPORTERS</b>
+      <span class="desc">데이터 안심구역 서포터즈</span>
+      <span class="sub">2023.09 – 12 · 카드뉴스 제작, 데이터 홍보</span>
+    </li>
+  </ul>
+
+  <div class="foot">
+    <span>2026.07.22 부터 기록합니다.</span>
+    <span>eunbel0113@naver.com</span>
+  </div>
 </div>
 </body>
 </html>
